@@ -1,15 +1,15 @@
 build/Debug/MinGW-Windows/BarCodeReaderTest.o: BarCodeReaderTest.cpp \
- BarCodeReader.h IInputSignal.h BarCode.h BarCodeValidationAlgorithm.h \
- InputSignalStub.h catch.hpp
+ BarCodeReader.h IReceiver.h BarCode.h BarCodeValidationAlgorithm.h \
+ Receiver.h catch.hpp
 
 BarCodeReader.h:
 
-IInputSignal.h:
+IReceiver.h:
 
 BarCode.h:
 
 BarCodeValidationAlgorithm.h:
 
-InputSignalStub.h:
+Receiver.h:
 
 catch.hpp:

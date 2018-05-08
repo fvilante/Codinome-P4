@@ -5,7 +5,7 @@
  */
 
 #include "BarCodeReader.h"
-#include "InputSignalStub.h"
+#include "Receiver.h"
 
 #include "catch.hpp"
 #include <string>
@@ -22,7 +22,7 @@
         "M#1uytyi34", "mensagem grandinha e com espaco viu?"};
         
         //Arrange
-        InputSignalStub<T>& stub = *(new InputSignalStub<T>(initialValue)); 
+        Receiver<T>& stub = *(new Receiver<T>(initialValue)); 
         //cria a classe em teste
         BarCodeReader leitorBarCode = BarCodeReader(stub);
 

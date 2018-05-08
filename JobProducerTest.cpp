@@ -17,7 +17,7 @@
 #include "MatrizRepository.h"
 #include "BarCodeQueue.h"
 #include "CabecoteRepository.h"
-#include "InputSignalStub.h"
+#include "Receiver.h"
 #include "IServiceLocator.h"
 #include "ServiceLocatorStub.h"
 

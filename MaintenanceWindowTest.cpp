@@ -5,7 +5,7 @@
  */
 
 #include "MaintenanceWindow.h"
-#include "InputSignalStub.h"
+#include "Receiver.h"
 
 #include "catch.hpp"
 
@@ -14,7 +14,7 @@
         
         //Arrange        
         bool initialValue = true; //valor inicial do sinal                
-        DigitalInputSignalStub& stub = *( new DigitalInputSignalStub(initialValue) );         
+        Receiver<bool>& stub = *( new Receiver<bool>(initialValue) );         
         //cria a gaveta
         MaintenanceWindow janelaDeManutencao = MaintenanceWindow(stub);
 

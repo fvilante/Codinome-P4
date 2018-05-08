@@ -14,7 +14,7 @@
 #ifndef DRAWER_H
 #define DRAWER_H
 
-#include "IInputSignal.h"
+#include "IReceiver.h"
 #include "Properties.h"
 
 
@@ -29,7 +29,7 @@ public:
     enum class State : bool { CLOSED=false, OPEN=true };
     
     Drawer() = delete;    
-    Drawer(IDigitalInputSignal& sensorSignal, Id gavetaId ) 
+    Drawer(IReceiver<bool>& sensorSignal, Id gavetaId ) 
         : signal(&sensorSignal), gavetaId_(gavetaId) { } 
     Drawer(const Drawer& orig) = default;
     virtual ~Drawer() = default;
@@ -43,11 +43,10 @@ public:
     //helpers
     bool FECHADA() { return (getState() == State::CLOSED) ? true : false; }
     bool ABERTA() { return (getState() == State::OPEN) ? true : false; }
-   
     
     
 private:
-    IDigitalInputSignal* signal; //sinal do sensor indutivo da gaveta
+    IReceiver<bool>* signal; //sinal do sensor indutivo da gaveta
     Id gavetaId_;
     
     //Coordenadas relativas da gaveta em relacao sistema absoluto da maquina

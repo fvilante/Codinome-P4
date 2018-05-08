@@ -1,11 +1,11 @@
 build/Debug/MinGW-Windows/MaintenanceWindowTest.o: \
- MaintenanceWindowTest.cpp MaintenanceWindow.h IInputSignal.h \
- InputSignalStub.h catch.hpp
+ MaintenanceWindowTest.cpp MaintenanceWindow.h IReceiver.h Receiver.h \
+ catch.hpp
 
 MaintenanceWindow.h:
 
-IInputSignal.h:
+IReceiver.h:
 
-InputSignalStub.h:
+Receiver.h:
 
 catch.hpp:

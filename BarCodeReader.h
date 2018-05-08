@@ -15,7 +15,7 @@
 #define BARCODEREADER_H
 
 
-#include "IInputSignal.h"
+#include "IReceiver.h"
 #include "BarCode.h"
 #include "BarCodeValidationAlgorithm.h"
 
@@ -28,12 +28,12 @@
 //para a camada de negócios.
 class BarCodeReader {
     
-    IInputSignal<std::string>* signal; //informacao do barcode
+    IReceiver<std::string>* signal; //informacao do barcode
     
 public:
     
     BarCodeReader() = delete;
-    BarCodeReader(IInputSignal<std::string>& barCodeSignal_) : signal(&barCodeSignal_) { }
+    BarCodeReader(IReceiver<std::string>& barCodeSignal_) : signal(&barCodeSignal_) { }
     BarCodeReader(const BarCodeReader& orig);
     virtual ~BarCodeReader();
 

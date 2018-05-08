@@ -1,3 +1,7 @@
 /Catch2-master/
 /build/
+*.o.d
 *.o
+*.exe
+*.EXE
+/dist/

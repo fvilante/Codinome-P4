@@ -1,8 +1,8 @@
-build/Debug/MinGW-Windows/Drawer.o: Drawer.cpp Drawer.h IInputSignal.h \
+build/Debug/MinGW-Windows/Drawer.o: Drawer.cpp Drawer.h IReceiver.h \
  Properties.h
 
 Drawer.h:
 
-IInputSignal.h:
+IReceiver.h:
 
 Properties.h:

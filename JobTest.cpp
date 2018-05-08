@@ -10,7 +10,7 @@
 #include "Matriz.h"
 #include "Drawer.h"
 #include "Cabecote.h"
-#include "InputSignalStub.h"
+#include "Receiver.h"
 #include "CorDaTinta.h"
 #include "BarCode.h"
 

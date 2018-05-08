@@ -5,7 +5,7 @@
  */
 
 #include "EmergencyButtom.h"
-#include "InputSignalStub.h"
+#include "Receiver.h"
 
 #include "catch.hpp"
 
@@ -15,7 +15,7 @@
         //Arrange
         
         bool initialValue = true;       
-        DigitalInputSignalStub& stub = *(new DigitalInputSignalStub(initialValue)); 
+        Receiver<bool>& stub = *(new Receiver<bool>(initialValue)); 
         //cria a gaveta
         EmergencyButtom botaoDeEmergencia = EmergencyButtom(stub);
 

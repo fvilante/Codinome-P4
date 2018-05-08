@@ -14,19 +14,19 @@
 #ifndef EMERGENCYBUTTOM_H
 #define EMERGENCYBUTTOM_H
 
-#include "IInputSignal.h"
+#include "IReceiver.h"
 
 //Classe para representar botão de emergencia
 class EmergencyButtom {
 
-    IDigitalInputSignal* signal; //sinal do botao de emergencia
+    IReceiver<bool>* signal; //sinal do botao de emergencia
 
 public:
     
     enum class State : bool { CLOSED=false, OPEN=true };
     
     EmergencyButtom() = delete;
-    EmergencyButtom(IDigitalInputSignal& sensorSignal) : signal(&sensorSignal) { }
+    EmergencyButtom(IReceiver<bool>& sensorSignal) : signal(&sensorSignal) { }
     EmergencyButtom(const EmergencyButtom& orig);
     virtual ~EmergencyButtom();
     

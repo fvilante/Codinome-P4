@@ -6,15 +6,15 @@
       <itemPath>SimpleClass.h</itemPath>
       <itemPath>SimpleClassTest.cpp</itemPath>
     </logicalFolder>
-    <logicalFolder name="f4" displayName="007 - DigitalSignal" projectFiles="true">
-      <itemPath>DigitalSignal.cpp</itemPath>
-      <itemPath>DigitalSignal.h</itemPath>
-      <itemPath>DigitalSignalTest.cpp</itemPath>
+    <logicalFolder name="f4" displayName="007 - Digital" projectFiles="true">
+      <itemPath>Digital.cpp</itemPath>
+      <itemPath>Digital.h</itemPath>
+      <itemPath>DigitalTest.cpp</itemPath>
     </logicalFolder>
-    <logicalFolder name="f3" displayName="010 - IInputSignal" projectFiles="true">
-      <itemPath>IInputSignal.h</itemPath>
-      <itemPath>InputSignalStub.h</itemPath>
-      <itemPath>InputSignalStubTest.cpp</itemPath>
+    <logicalFolder name="f3" displayName="010 - IReceiver" projectFiles="true">
+      <itemPath>IReceiver.h</itemPath>
+      <itemPath>Receiver.h</itemPath>
+      <itemPath>ReceiverTest.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="f6" displayName="018 - Drawer" projectFiles="true">
       <itemPath>Drawer.cpp</itemPath>
@@ -192,11 +192,11 @@
       </item>
       <item path="CorDaTinta.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="DigitalSignal.cpp" ex="false" tool="1" flavor2="0">
+      <item path="Digital.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="DigitalSignal.h" ex="false" tool="3" flavor2="0">
+      <item path="Digital.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="DigitalSignalTest.cpp" ex="false" tool="1" flavor2="0">
+      <item path="DigitalTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Drawer.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -214,13 +214,9 @@
       </item>
       <item path="EmergencyButtomTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="IInputSignal.h" ex="false" tool="3" flavor2="0">
+      <item path="IReceiver.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="IServiceLocator.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="InputSignalStub.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="InputSignalStubTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Job.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -265,6 +261,10 @@
       <item path="Queue.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="QueueTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Receiver.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ReceiverTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ServiceLocatorBasic.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -358,11 +358,11 @@
       </item>
       <item path="CorDaTinta.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="DigitalSignal.cpp" ex="false" tool="1" flavor2="0">
+      <item path="Digital.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="DigitalSignal.h" ex="false" tool="3" flavor2="0">
+      <item path="Digital.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="DigitalSignalTest.cpp" ex="false" tool="1" flavor2="0">
+      <item path="DigitalTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Drawer.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -380,13 +380,9 @@
       </item>
       <item path="EmergencyButtomTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="IInputSignal.h" ex="false" tool="3" flavor2="0">
+      <item path="IReceiver.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="IServiceLocator.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="InputSignalStub.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="InputSignalStubTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Job.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -432,6 +428,10 @@
       </item>
       <item path="QueueTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="Receiver.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ReceiverTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="ServiceLocatorBasic.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ServiceLocatorBasic.h" ex="false" tool="3" flavor2="0">
@@ -453,6 +453,133 @@
       <item path="TimeStamp.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="TimeStampTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Fast_Build" type="1" platformSpecific="true">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <platform>3</platform>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <commandLine>-O0</commandLine>
+        </ccTool>
+        <requiredProjects>
+          <makeArtifact PL="C:/Users/Flavio/Google Drive/Flavio/10 - Projetos/Leoni/P4-Retrofit/20 - Software P4-Leoni/Clock (Experimento)/clockFlavio/clockFlavio"
+                        CT="0"
+                        CN="Default"
+                        AC="true"
+                        BL="false"
+                        WD="C:/Users/Flavio/Google Drive/Flavio/10 - Projetos/Leoni/P4-Retrofit/20 - Software P4-Leoni/Clock (Experimento)/clockFlavio"
+                        BC="echo build"
+                        CC="echo clean"
+                        OP="nbproject\private\tools\localhost\MinGW\g++.exe">
+          </makeArtifact>
+        </requiredProjects>
+      </compileType>
+      <item path="BarCode.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BarCode.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BarCodeQueue.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BarCodeReader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BarCodeReader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BarCodeValidationAlgorithm.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BarCodeValidationAlgorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BusinessStateMachine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BusinessStateMachine.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Cabecote.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Cabecote.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CabecoteRepository.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CabecoteRepository.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CorDaTinta.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CorDaTinta.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Digital.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Digital.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Drawer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Drawer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DrawerRepository.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DrawerRepository.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="EmergencyButtom.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="EmergencyButtom.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IReceiver.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IServiceLocator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Job.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Job.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="JobConsumer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="JobConsumer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="JobProducer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="JobProducer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="JobQueue.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MaintenanceWindow.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MaintenanceWindow.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Matriz.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Matriz.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MatrizRepository.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MatrizRepository.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Properties.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Queue.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Queue.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Receiver.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ServiceLocatorBasic.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ServiceLocatorBasic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ServiceLocatorStub.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ServiceLocatorStub.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SimpleClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SimpleClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TimeStamp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="TimeStamp.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

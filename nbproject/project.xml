@@ -8,7 +8,9 @@
             <cpp-extensions>cpp</cpp-extensions>
             <header-extensions>h</header-extensions>
             <sourceEncoding>UTF-8</sourceEncoding>
-            <make-dep-projects/>
+            <make-dep-projects>
+                <make-dep-project>C:/Users/Flavio/Google Drive/Flavio/10 - Projetos/Leoni/P4-Retrofit/20 - Software P4-Leoni/Clock (Experimento)/clockFlavio/clockFlavio</make-dep-project>
+            </make-dep-projects>
             <sourceRootList/>
             <confList>
                 <confElem>
@@ -17,6 +19,10 @@
                 </confElem>
                 <confElem>
                     <name>Release</name>
+                    <type>1</type>
+                </confElem>
+                <confElem>
+                    <name>Fast_Build</name>
                     <type>1</type>
                 </confElem>
             </confList>

@@ -1,12 +1,16 @@
 build/Debug/MinGW-Windows/DrawerTest.o: DrawerTest.cpp Drawer.h \
- IInputSignal.h Properties.h InputSignalStub.h catch.hpp
+ IReceiver.h Properties.h Receiver.h Digital.h TimeStamp.h catch.hpp
 
 Drawer.h:
 
-IInputSignal.h:
+IReceiver.h:
 
 Properties.h:
 
-InputSignalStub.h:
+Receiver.h:
+
+Digital.h:
+
+TimeStamp.h:
 
 catch.hpp:

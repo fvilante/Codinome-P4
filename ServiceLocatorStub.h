@@ -22,7 +22,7 @@
 #include "MatrizRepository.h"
 #include "BarCodeQueue.h"
 #include "CabecoteRepository.h"
-#include "InputSignalStub.h"
+#include "Receiver.h"
 #include "IServiceLocator.h"
 #include "ServiceLocatorBasic.h"
 
@@ -31,8 +31,8 @@ class StubServicesFactory {
 
 protected:
     //Sinais das gavetas
-    DigitalInputSignalStub sensor_gaveta_1_ = DigitalInputSignalStub(true);
-    DigitalInputSignalStub sensor_gaveta_2_ = DigitalInputSignalStub(true);  
+    Receiver<bool> sensor_gaveta_1_ = Receiver<bool>(true);
+    Receiver<bool> sensor_gaveta_2_ = Receiver<bool>(true);  
     
     //Matriz Repository
     std::vector<Matriz> matrizContainer_ = { Matriz(), Matriz(), Matriz() };

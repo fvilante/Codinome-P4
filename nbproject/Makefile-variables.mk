@@ -22,6 +22,14 @@ CND_ARTIFACT_PATH_Release=dist/Release/MinGW-Windows/software_p4-leoni
 CND_PACKAGE_DIR_Release=dist/Release/MinGW-Windows/package
 CND_PACKAGE_NAME_Release=softwarep4-leoni.tar
 CND_PACKAGE_PATH_Release=dist/Release/MinGW-Windows/package/softwarep4-leoni.tar
+# Fast_Build configuration
+CND_PLATFORM_Fast_Build=MinGW-Windows
+CND_ARTIFACT_DIR_Fast_Build=dist/Fast_Build/MinGW-Windows
+CND_ARTIFACT_NAME_Fast_Build=software_p4-leoni
+CND_ARTIFACT_PATH_Fast_Build=dist/Fast_Build/MinGW-Windows/software_p4-leoni
+CND_PACKAGE_DIR_Fast_Build=dist/Fast_Build/MinGW-Windows/package
+CND_PACKAGE_NAME_Fast_Build=softwarep4-leoni.tar
+CND_PACKAGE_PATH_Fast_Build=dist/Fast_Build/MinGW-Windows/package/softwarep4-leoni.tar
 #
 # include compiler specific variables
 #
