@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="f1" displayName="000 - SimpleClass" projectFiles="true">
+      <itemPath>SimpleClass.cpp</itemPath>
+      <itemPath>SimpleClass.h</itemPath>
+      <itemPath>SimpleClassTest.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f4" displayName="007 - DigitalSignal" projectFiles="true">
+      <itemPath>DigitalSignal.cpp</itemPath>
+      <itemPath>DigitalSignal.h</itemPath>
+      <itemPath>DigitalSignalTest.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f3" displayName="010 - IInputSignal" projectFiles="true">
+      <itemPath>IInputSignal.h</itemPath>
+      <itemPath>InputSignalStub.h</itemPath>
+      <itemPath>InputSignalStubTest.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f6" displayName="018 - Drawer" projectFiles="true">
+      <itemPath>Drawer.cpp</itemPath>
+      <itemPath>Drawer.h</itemPath>
+      <itemPath>DrawerRepository.cpp</itemPath>
+      <itemPath>DrawerRepository.h</itemPath>
+      <itemPath>DrawerTest.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f5" displayName="020  - BarCodeReader" projectFiles="true">
+      <itemPath>BarCode.cpp</itemPath>
+      <itemPath>BarCode.h</itemPath>
+      <itemPath>BarCodeReader.cpp</itemPath>
+      <itemPath>BarCodeReader.h</itemPath>
+      <itemPath>BarCodeReaderTest.cpp</itemPath>
+      <itemPath>BarCodeTest.cpp</itemPath>
+      <itemPath>BarCodeValidationAlgorithm.cpp</itemPath>
+      <itemPath>BarCodeValidationAlgorithm.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f2"
+                   displayName="025 - MaintenanceWindow"
+                   projectFiles="true">
+      <itemPath>MaintenanceWindow.cpp</itemPath>
+      <itemPath>MaintenanceWindow.h</itemPath>
+      <itemPath>MaintenanceWindowTest.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f7"
+                   displayName="028 - EmergenceButtom"
+                   projectFiles="true">
+      <itemPath>EmergencyButtom.cpp</itemPath>
+      <itemPath>EmergencyButtom.h</itemPath>
+      <itemPath>EmergencyButtomTest.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f8"
+                   displayName="040 - Business State Machine"
+                   projectFiles="true">
+      <itemPath>BusinessStateMachine.cpp</itemPath>
+      <itemPath>BusinessStateMachine.h</itemPath>
+      <itemPath>BusinessStateMachineTest.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f9" displayName="050 - Job Generator" projectFiles="true">
+      <itemPath>Job.cpp</itemPath>
+      <itemPath>Job.h</itemPath>
+      <itemPath>JobConsumer.cpp</itemPath>
+      <itemPath>JobConsumer.h</itemPath>
+      <itemPath>JobProducer.cpp</itemPath>
+      <itemPath>JobProducer.h</itemPath>
+      <itemPath>JobProducerTest.cpp</itemPath>
+      <itemPath>JobTest.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f11" displayName="055 - Matriz" projectFiles="true">
+      <itemPath>Matriz.cpp</itemPath>
+      <itemPath>Matriz.h</itemPath>
+      <itemPath>MatrizRepository.cpp</itemPath>
+      <itemPath>MatrizRepository.h</itemPath>
+      <itemPath>MatrizRepositoryTest.cpp</itemPath>
+      <itemPath>MatrizTest.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f12" displayName="060 - Macros" projectFiles="true">
+      <itemPath>Properties.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f13" displayName="070 - Cabecote" projectFiles="true">
+      <itemPath>Cabecote.cpp</itemPath>
+      <itemPath>Cabecote.h</itemPath>
+      <itemPath>CabecoteRepository.cpp</itemPath>
+      <itemPath>CabecoteRepository.h</itemPath>
+      <itemPath>CabecoteTest.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f14" displayName="075 - Queue" projectFiles="true">
+      <itemPath>BarCodeQueue.h</itemPath>
+      <itemPath>JobQueue.h</itemPath>
+      <itemPath>Queue.cpp</itemPath>
+      <itemPath>Queue.h</itemPath>
+      <itemPath>QueueTest.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f15"
+                   displayName="080 - Service Locator"
+                   projectFiles="true">
+      <itemPath>IServiceLocator.h</itemPath>
+      <itemPath>ServiceLocatorBasic.cpp</itemPath>
+      <itemPath>ServiceLocatorBasic.h</itemPath>
+      <itemPath>ServiceLocatorBasicTest.cpp</itemPath>
+      <itemPath>ServiceLocatorStub.cpp</itemPath>
+      <itemPath>ServiceLocatorStub.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f16" displayName="083 - Cor da Tinta" projectFiles="true">
+      <itemPath>CorDaTinta.cpp</itemPath>
+      <itemPath>CorDaTinta.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f10" displayName="090 - TimeStamp" projectFiles="true">
+      <itemPath>TimeStamp.cpp</itemPath>
+      <itemPath>TimeStamp.h</itemPath>
+      <itemPath>TimeStampTest.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <standard>8</standard>
+          <incDir>
+            <pElem>C:\Users\Flavio\Google</pElem>
+            <pElem>Drive\Flavio\10</pElem>
+            <pElem>Projetos\Leoni\P4-Retrofit\20</pElem>
+            <pElem>Software</pElem>
+            <pElem>P4-Leoni\Software</pElem>
+            <pElem>C:\Users\Flavio\Google Drive\Flavio\10 - Projetos\Leoni\P4-Retrofit\20 - Software P4-Leoni\Software P4-Leoni\date\include\date</pElem>
+          </incDir>
+        </ccTool>
+      </compileType>
+      <item path="BarCode.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BarCode.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BarCodeQueue.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BarCodeReader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BarCodeReader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BarCodeReaderTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BarCodeTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BarCodeValidationAlgorithm.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BarCodeValidationAlgorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BusinessStateMachine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BusinessStateMachine.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BusinessStateMachineTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Cabecote.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Cabecote.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CabecoteRepository.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CabecoteRepository.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CabecoteTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CorDaTinta.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CorDaTinta.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DigitalSignal.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DigitalSignal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DigitalSignalTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Drawer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Drawer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DrawerRepository.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DrawerRepository.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DrawerTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="EmergencyButtom.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="EmergencyButtom.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="EmergencyButtomTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="IInputSignal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IServiceLocator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InputSignalStub.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InputSignalStubTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Job.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Job.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="JobConsumer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="JobConsumer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="JobProducer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="JobProducer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="JobProducerTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="JobQueue.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="JobTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MaintenanceWindow.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MaintenanceWindow.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MaintenanceWindowTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Matriz.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Matriz.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MatrizRepository.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MatrizRepository.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MatrizRepositoryTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MatrizTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Properties.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Queue.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Queue.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="QueueTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ServiceLocatorBasic.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ServiceLocatorBasic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ServiceLocatorBasicTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ServiceLocatorStub.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ServiceLocatorStub.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SimpleClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SimpleClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SimpleClassTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="TimeStamp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="TimeStamp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TimeStampTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>8</standard>
+          <incDir>
+            <pElem>C:\Users\Flavio\Google</pElem>
+            <pElem>Drive\Flavio\10</pElem>
+            <pElem>Projetos\Leoni\P4-Retrofit\20</pElem>
+            <pElem>Software</pElem>
+            <pElem>P4-Leoni\Software</pElem>
+            <pElem>P4-Leoni\date\include\date</pElem>
+          </incDir>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="BarCode.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BarCode.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BarCodeQueue.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BarCodeReader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BarCodeReader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BarCodeReaderTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BarCodeTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BarCodeValidationAlgorithm.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BarCodeValidationAlgorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BusinessStateMachine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BusinessStateMachine.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BusinessStateMachineTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Cabecote.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Cabecote.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CabecoteRepository.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CabecoteRepository.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CabecoteTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CorDaTinta.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CorDaTinta.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DigitalSignal.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DigitalSignal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DigitalSignalTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Drawer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Drawer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DrawerRepository.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DrawerRepository.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DrawerTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="EmergencyButtom.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="EmergencyButtom.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="EmergencyButtomTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="IInputSignal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IServiceLocator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InputSignalStub.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InputSignalStubTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Job.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Job.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="JobConsumer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="JobConsumer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="JobProducer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="JobProducer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="JobProducerTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="JobQueue.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="JobTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MaintenanceWindow.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MaintenanceWindow.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MaintenanceWindowTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Matriz.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Matriz.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MatrizRepository.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MatrizRepository.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MatrizRepositoryTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MatrizTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Properties.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Queue.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Queue.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="QueueTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ServiceLocatorBasic.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ServiceLocatorBasic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ServiceLocatorBasicTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ServiceLocatorStub.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ServiceLocatorStub.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SimpleClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SimpleClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SimpleClassTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="TimeStamp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="TimeStamp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TimeStampTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
