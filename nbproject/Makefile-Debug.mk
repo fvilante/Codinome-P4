@@ -56,7 +56,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/Job.o \
 	${OBJECTDIR}/JobConsumer.o \
 	${OBJECTDIR}/JobProducer.o \
-	${OBJECTDIR}/JobProducerTest.o \
 	${OBJECTDIR}/JobTest.o \
 	${OBJECTDIR}/MaintenanceWindow.o \
 	${OBJECTDIR}/MaintenanceWindowTest.o \
@@ -66,10 +65,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/MatrizTest.o \
 	${OBJECTDIR}/Queue.o \
 	${OBJECTDIR}/QueueTest.o \
+	${OBJECTDIR}/Receiver.o \
 	${OBJECTDIR}/ReceiverTest.o \
-	${OBJECTDIR}/ServiceLocatorBasic.o \
-	${OBJECTDIR}/ServiceLocatorBasicTest.o \
-	${OBJECTDIR}/ServiceLocatorStub.o \
 	${OBJECTDIR}/SimpleClass.o \
 	${OBJECTDIR}/SimpleClassTest.o \
 	${OBJECTDIR}/TimeStamp.o \
@@ -206,11 +203,6 @@ ${OBJECTDIR}/JobProducer.o: JobProducer.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -I/C/Users/Flavio/Google\ Drive/Flavio/10\ -\ Projetos/Leoni/P4-Retrofit/20\ -\ Software\ P4-Leoni/Software\ P4-Leoni/date/include/date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/JobProducer.o JobProducer.cpp
 
-${OBJECTDIR}/JobProducerTest.o: JobProducerTest.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -I/C/Users/Flavio/Google\ Drive/Flavio/10\ -\ Projetos/Leoni/P4-Retrofit/20\ -\ Software\ P4-Leoni/Software\ P4-Leoni/date/include/date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/JobProducerTest.o JobProducerTest.cpp
-
 ${OBJECTDIR}/JobTest.o: JobTest.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -256,25 +248,15 @@ ${OBJECTDIR}/QueueTest.o: QueueTest.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -I/C/Users/Flavio/Google\ Drive/Flavio/10\ -\ Projetos/Leoni/P4-Retrofit/20\ -\ Software\ P4-Leoni/Software\ P4-Leoni/date/include/date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/QueueTest.o QueueTest.cpp
 
+${OBJECTDIR}/Receiver.o: Receiver.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -I/C/Users/Flavio/Google\ Drive/Flavio/10\ -\ Projetos/Leoni/P4-Retrofit/20\ -\ Software\ P4-Leoni/Software\ P4-Leoni/date/include/date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Receiver.o Receiver.cpp
+
 ${OBJECTDIR}/ReceiverTest.o: ReceiverTest.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -I/C/Users/Flavio/Google\ Drive/Flavio/10\ -\ Projetos/Leoni/P4-Retrofit/20\ -\ Software\ P4-Leoni/Software\ P4-Leoni/date/include/date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ReceiverTest.o ReceiverTest.cpp
-
-${OBJECTDIR}/ServiceLocatorBasic.o: ServiceLocatorBasic.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -I/C/Users/Flavio/Google\ Drive/Flavio/10\ -\ Projetos/Leoni/P4-Retrofit/20\ -\ Software\ P4-Leoni/Software\ P4-Leoni/date/include/date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ServiceLocatorBasic.o ServiceLocatorBasic.cpp
-
-${OBJECTDIR}/ServiceLocatorBasicTest.o: ServiceLocatorBasicTest.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -I/C/Users/Flavio/Google\ Drive/Flavio/10\ -\ Projetos/Leoni/P4-Retrofit/20\ -\ Software\ P4-Leoni/Software\ P4-Leoni/date/include/date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ServiceLocatorBasicTest.o ServiceLocatorBasicTest.cpp
-
-${OBJECTDIR}/ServiceLocatorStub.o: ServiceLocatorStub.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -I/C/Users/Flavio/Google\ Drive/Flavio/10\ -\ Projetos/Leoni/P4-Retrofit/20\ -\ Software\ P4-Leoni/Software\ P4-Leoni/date/include/date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ServiceLocatorStub.o ServiceLocatorStub.cpp
 
 ${OBJECTDIR}/SimpleClass.o: SimpleClass.cpp
 	${MKDIR} -p ${OBJECTDIR}

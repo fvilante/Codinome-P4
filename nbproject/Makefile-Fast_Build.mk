@@ -53,6 +53,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Matriz.o \
 	${OBJECTDIR}/MatrizRepository.o \
 	${OBJECTDIR}/Queue.o \
+	${OBJECTDIR}/Receiver.o \
 	${OBJECTDIR}/ServiceLocatorBasic.o \
 	${OBJECTDIR}/ServiceLocatorStub.o \
 	${OBJECTDIR}/SimpleClass.o \
@@ -173,6 +174,11 @@ ${OBJECTDIR}/Queue.o: Queue.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Queue.o Queue.cpp
+
+${OBJECTDIR}/Receiver.o: Receiver.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Receiver.o Receiver.cpp
 
 ${OBJECTDIR}/ServiceLocatorBasic.o: ServiceLocatorBasic.cpp
 	${MKDIR} -p ${OBJECTDIR}

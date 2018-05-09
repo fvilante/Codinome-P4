@@ -19,11 +19,11 @@
 #include <stdint.h>
 
 
+
 //Abstracao de um sinal digital
 //-Pode ser nulo
 //-Se for nulo deve-se ignorar o timestamp
 class Digital {
-    
     
 public:
     
@@ -65,6 +65,12 @@ public:
     }
     bool operator!=(const Digital& other) const {
         return (level_ != other.level_);
+    }    
+    bool operator==(const Digital::Level& other) const {
+        return (level_ == other);
+    }
+    bool operator!=(const Digital::Level& other) const {
+        return (level_ != other);
     }
     
     //common getters, setters and functions
@@ -79,6 +85,12 @@ private:
     TimeStamp timeStamp_;
 
 };
+
+
+
+//Helper 'using' expression to improve (???) readability
+using Level = Digital::Level;
+
 
 #endif /* DIGITAL_H */
 

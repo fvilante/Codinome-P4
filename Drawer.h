@@ -15,8 +15,12 @@
 #define DRAWER_H
 
 #include "IReceiver.h"
+#include "Digital.h"
 #include "Properties.h"
 
+#include "Receiver.h"
+
+#include <memory>
 
 //Classe para representar a gaveta.
 //Esta classe tambem faz um wrapping do sinal do sensor indutivo da gaveta
@@ -29,13 +33,14 @@ public:
     enum class State : bool { CLOSED=false, OPEN=true };
     
     Drawer() = delete;    
-    Drawer(IReceiver<bool>& sensorSignal, Id gavetaId ) 
-        : signal(&sensorSignal), gavetaId_(gavetaId) { } 
+    Drawer(std::shared_ptr<IReceiver<Digital>> sensorSignal, Id gavetaId ) 
+        : signal(sensorSignal), gavetaId_(gavetaId) { } 
     Drawer(const Drawer& orig) = default;
     virtual ~Drawer() = default;
     
     Drawer::State getState() { 
-        return ( signal->read() == true ) ? State::OPEN : State::CLOSED; 
+        return ( signal->read() == Digital::Level::High ) ? 
+            Drawer::State::OPEN : Drawer::State::CLOSED; 
     }
     
     Id getId() { return gavetaId_; } 
@@ -46,7 +51,7 @@ public:
     
     
 private:
-    IReceiver<bool>* signal; //sinal do sensor indutivo da gaveta
+    std::shared_ptr<IReceiver<Digital>> signal; //sinal do sensor indutivo da gaveta
     Id gavetaId_;
     
     //Coordenadas relativas da gaveta em relacao sistema absoluto da maquina

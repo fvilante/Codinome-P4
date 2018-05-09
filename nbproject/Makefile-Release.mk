@@ -66,6 +66,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/MatrizTest.o \
 	${OBJECTDIR}/Queue.o \
 	${OBJECTDIR}/QueueTest.o \
+	${OBJECTDIR}/Receiver.o \
 	${OBJECTDIR}/ReceiverTest.o \
 	${OBJECTDIR}/ServiceLocatorBasic.o \
 	${OBJECTDIR}/ServiceLocatorBasicTest.o \
@@ -255,6 +256,11 @@ ${OBJECTDIR}/QueueTest.o: QueueTest.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -IP4-Leoni\date\include\date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/QueueTest.o QueueTest.cpp
+
+${OBJECTDIR}/Receiver.o: Receiver.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -IP4-Leoni\date\include\date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Receiver.o Receiver.cpp
 
 ${OBJECTDIR}/ReceiverTest.o: ReceiverTest.cpp
 	${MKDIR} -p ${OBJECTDIR}

@@ -35,5 +35,6 @@ public:
     
 };
 
+
 #endif /* BARCODE_H */
 

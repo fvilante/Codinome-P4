@@ -119,6 +119,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Receiver.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -216,8 +217,6 @@
       </item>
       <item path="IReceiver.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="IServiceLocator.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="Job.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Job.h" ex="false" tool="3" flavor2="0">
@@ -229,8 +228,6 @@
       <item path="JobProducer.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="JobProducer.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="JobProducerTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="JobQueue.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -262,19 +259,11 @@
       </item>
       <item path="QueueTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="Receiver.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Receiver.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="ReceiverTest.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="ServiceLocatorBasic.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="ServiceLocatorBasic.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="ServiceLocatorBasicTest.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="ServiceLocatorStub.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="ServiceLocatorStub.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="SimpleClass.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -428,6 +417,8 @@
       </item>
       <item path="QueueTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="Receiver.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Receiver.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="ReceiverTest.cpp" ex="false" tool="1" flavor2="0">
@@ -562,6 +553,8 @@
       <item path="Queue.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Queue.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Receiver.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Receiver.h" ex="false" tool="3" flavor2="0">
       </item>

@@ -7,30 +7,28 @@
 
 #include "Drawer.h"
 #include "Receiver.h"
+#include "Digital.h"
 #include "Properties.h"
 
-#include "Digital.h"
 
 #include "catch.hpp"
 
-using DigitalSignalReceiver = Receiver<Digital>;
+#include <Memory>
 
-DigitalSignalReceiver* createInputSignalStub() {
-    using Level = Digital::Level;
-    auto signal = Digital(Level::High);
-    return new Receiver<Digital>(signal);
-}
+
+
 
 TEST_CASE( "Drawer class Test", "[Drawer]" ) {
 
-    //Arrange    
-    bool initialValue = true; //valor inicial do sinal            
-    Receiver<bool>& stub = *( new Receiver<bool>(true) );
+    //arrange   
+    Digital level_low {Level::Low};
+    Digital level_high {Level::High};
     
-    DigitalSignalReceiver& stub2 = *( createInputSignalStub() );
+    //create sensor
+    auto sensor1 = createDigitalReceiver(level_low);
     
     //cria a gaveta
-    Drawer gaveta = Drawer(stub, Drawer::Id::GAVETA1);
+    Drawer gaveta = Drawer(sensor1, Drawer::Id::GAVETA1);
 
     SECTION("Testa metodo getId da gaveta") {
         
@@ -41,16 +39,16 @@ TEST_CASE( "Drawer class Test", "[Drawer]" ) {
 
     SECTION("Testa variacao") {
 
-        stub.put(false);
+        sensor1->put( level_low );
         REQUIRE(gaveta.getState() == Drawer::State::CLOSED);
 
-        stub.put(true);
+        sensor1->put(level_high);
         REQUIRE(gaveta.getState() == Drawer::State::OPEN);
     }
 
     SECTION("Testa Propriedades") {
 
-        Drawer m = Drawer(stub, Drawer::Id::GAVETA1);
+        Drawer m = Drawer(sensor1, Drawer::Id::GAVETA1);
 
         SECTION("Testa inicializacao das Propriedades") {
             TESTA_LER_PROPRIEDADE(Coordenada_X_RelativaDaGaveta, 0);
