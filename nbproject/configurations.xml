@@ -13,6 +13,7 @@
     </logicalFolder>
     <logicalFolder name="f3" displayName="010 - IReceiver" projectFiles="true">
       <itemPath>IReceiver.h</itemPath>
+      <itemPath>Receiver.cpp</itemPath>
       <itemPath>Receiver.h</itemPath>
       <itemPath>ReceiverTest.cpp</itemPath>
     </logicalFolder>
@@ -119,7 +120,6 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>Receiver.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"

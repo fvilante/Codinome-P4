@@ -16,8 +16,6 @@
 #include <Memory>
 
 
-
-
 TEST_CASE( "Drawer class Test", "[Drawer]" ) {
 
     //arrange   
@@ -28,11 +26,11 @@ TEST_CASE( "Drawer class Test", "[Drawer]" ) {
     auto sensor1 = createDigitalReceiver(level_low);
     
     //cria a gaveta
-    Drawer gaveta = Drawer(sensor1, Drawer::Id::GAVETA1);
+    auto gaveta = createDrawer(sensor1, Drawer::Id::GAVETA1);
 
     SECTION("Testa metodo getId da gaveta") {
         
-        Drawer::Id id = gaveta.getId();
+        Drawer::Id id = gaveta->getId();
         REQUIRE(id == Drawer::Id::GAVETA1);
         
     }
@@ -40,10 +38,10 @@ TEST_CASE( "Drawer class Test", "[Drawer]" ) {
     SECTION("Testa variacao") {
 
         sensor1->put( level_low );
-        REQUIRE(gaveta.getState() == Drawer::State::CLOSED);
+        REQUIRE(gaveta->getState() == Drawer::State::CLOSED);
 
         sensor1->put(level_high);
-        REQUIRE(gaveta.getState() == Drawer::State::OPEN);
+        REQUIRE(gaveta->getState() == Drawer::State::OPEN);
     }
 
     SECTION("Testa Propriedades") {
@@ -63,8 +61,6 @@ TEST_CASE( "Drawer class Test", "[Drawer]" ) {
         }
 
     }
-
-
 
 };
 

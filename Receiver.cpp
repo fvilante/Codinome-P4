@@ -6,7 +6,7 @@
 
 #include "Receiver.h"
 
-//Helper function to factory a digital receiver object
+
 std::shared_ptr<Receiver<Digital>> createDigitalReceiver(Digital initial_level) {    
     return std::make_shared< Receiver<Digital> >(initial_level);
 }

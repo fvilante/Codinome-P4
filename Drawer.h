@@ -20,6 +20,9 @@
 
 #include <memory>
 
+
+
+
 //Classe para representar a gaveta.
 //Esta classe tambem faz um wrapping do sinal do sensor indutivo da gaveta
 class Drawer {
@@ -58,6 +61,11 @@ private:
     PROPERTY(int, Coordenada_Z_RelativaDaGaveta, 0);
  
 };
+
+//Helper function to factory a drawer object
+std::shared_ptr<Drawer> 
+createDrawer(std::shared_ptr<IReceiver<Digital>> sensor, Drawer::Id id);
+
 
 #endif /* DRAWER_H */
 
