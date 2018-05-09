@@ -18,8 +18,6 @@
 #include "Digital.h"
 #include "Properties.h"
 
-#include "Receiver.h"
-
 #include <memory>
 
 //Classe para representar a gaveta.

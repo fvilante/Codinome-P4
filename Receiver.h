@@ -29,7 +29,7 @@ std::shared_ptr<Receiver<Digital>> createDigitalReceiver(Digital initial_level);
 
 
 
-//A generic receiver TEE template
+//A generic 'receiver TEE' template
 template <class T>
 class Receiver : public IReceiver<T> {
     

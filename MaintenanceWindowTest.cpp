@@ -6,26 +6,32 @@
 
 #include "MaintenanceWindow.h"
 #include "Receiver.h"
+#include "Digital.h"
 
 #include "catch.hpp"
 
+#include <memory>
 
-    TEST_CASE( "MaintenanceWindow class Test", "[MaintenanceWindow]" ) {
-        
-        //Arrange        
-        bool initialValue = true; //valor inicial do sinal                
-        Receiver<bool>& stub = *( new Receiver<bool>(initialValue) );         
-        //cria a gaveta
-        MaintenanceWindow janelaDeManutencao = MaintenanceWindow(stub);
+TEST_CASE( "MaintenanceWindow class Test", "[MaintenanceWindow]" ) {
 
-        SECTION("Testa variacao") {
-            
-            stub.put(false);
-            REQUIRE(janelaDeManutencao.getState() == MaintenanceWindow::State::CLOSED);
-            
-            stub.put(true);
-            REQUIRE(janelaDeManutencao.getState() == MaintenanceWindow::State::OPEN);
-        }
-        
+    //arrange   
+    Digital level_low {Level::Low};
+    Digital level_high {Level::High};
 
-    };
+    //create sensor
+    auto sensor = createDigitalReceiver(level_low);  
+    
+    //cria a gaveta
+    MaintenanceWindow janelaDeManutencao = MaintenanceWindow(sensor);
+
+    SECTION("Testa variacao") {
+
+        sensor->put(level_low);
+        REQUIRE(janelaDeManutencao.getState() == MaintenanceWindow::State::CLOSED);
+
+        sensor->put(level_high);
+        REQUIRE(janelaDeManutencao.getState() == MaintenanceWindow::State::OPEN);
+    }
+
+
+};

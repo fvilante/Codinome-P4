@@ -15,26 +15,29 @@
 #define EMERGENCYBUTTOM_H
 
 #include "IReceiver.h"
+#include "Digital.h"
+
+#include <memory>
 
 //Classe para representar botão de emergencia
 class EmergencyButtom {
-
-    IReceiver<bool>* signal; //sinal do botao de emergencia
 
 public:
     
     enum class State : bool { CLOSED=false, OPEN=true };
     
     EmergencyButtom() = delete;
-    EmergencyButtom(IReceiver<bool>& sensorSignal) : signal(&sensorSignal) { }
+    EmergencyButtom(std::shared_ptr<IReceiver<Digital>> sensorSignal) : signal(sensorSignal) { }
     EmergencyButtom(const EmergencyButtom& orig);
     virtual ~EmergencyButtom();
     
     EmergencyButtom::State getState() { 
-        return ( signal->read() == true ) ? 
-            EmergencyButtom::State::OPEN : EmergencyButtom::State::CLOSED; 
+        return ( signal->read() == Level::High ) ? State::OPEN : State::CLOSED; 
     }
     
+private:
+    
+    std::shared_ptr<IReceiver<Digital>> signal; //sinal do botao de emergencia
     
 };
 
