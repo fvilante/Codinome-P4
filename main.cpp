@@ -17,6 +17,7 @@
 #define CATCH_CONFIG_RUNNER
 #include "catch.hpp"
 
+#include "SimpleClass.h"
 
 using namespace std;
 
@@ -25,9 +26,11 @@ using namespace std;
  */
 int main(int argc, char** argv) {
    
+    
     //Runs unit tests
     int result = Catch::Session().run( argc, argv );    
     
+    testFunction();
     
     return 0;
 }

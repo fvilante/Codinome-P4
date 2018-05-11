@@ -21,8 +21,6 @@
 #include <memory>
 
 
-
-
 //Classe para representar a gaveta.
 //Esta classe tambem faz um wrapping do sinal do sensor indutivo da gaveta
 class Drawer {
@@ -35,12 +33,12 @@ public:
     
     Drawer() = delete;    
     Drawer(std::shared_ptr<IReceiver<Digital>> sensorSignal, Id gavetaId ) 
-        : signal(sensorSignal), gavetaId_(gavetaId) { } 
+        : signal_(sensorSignal), gavetaId_(gavetaId) { } 
     Drawer(const Drawer& orig) = default;
     virtual ~Drawer() = default;
     
     Drawer::State getState() { 
-        return ( signal->read() == Digital::Level::High ) ? 
+        return ( signal_->read() == Digital::Level::High ) ? 
             Drawer::State::OPEN : Drawer::State::CLOSED; 
     }
     
@@ -50,15 +48,28 @@ public:
     bool FECHADA() { return (getState() == State::CLOSED) ? true : false; }
     bool ABERTA() { return (getState() == State::OPEN) ? true : false; }
     
+protected:
+    std::shared_ptr<IReceiver<Digital>> signalRead() { 
+        
+        if(/*getInverter_Logica_Do_Sinal()*/false==true) { 
+            //return true;
+        }
+        //else
+        return signal_;
+    
+    }
     
 private:
-    std::shared_ptr<IReceiver<Digital>> signal; //sinal do sensor indutivo da gaveta
+    
+    std::shared_ptr<IReceiver<Digital>> signal_; //sinal do sensor indutivo da gaveta
     Id gavetaId_;
+    
     
     //Coordenadas relativas da gaveta em relacao sistema absoluto da maquina
     PROPERTY(int, Coordenada_X_RelativaDaGaveta, 0);
     PROPERTY(int, Coordenada_Y_RelativaDaGaveta, 0);
     PROPERTY(int, Coordenada_Z_RelativaDaGaveta, 0);
+    PROPERTY(bool, Inverter_Logica_Do_Sinal, false);
  
 };
 
