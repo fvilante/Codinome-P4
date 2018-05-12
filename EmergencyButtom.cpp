@@ -14,9 +14,4 @@
 #include "EmergencyButtom.h"
 
 
-EmergencyButtom::EmergencyButtom(const EmergencyButtom& orig) {
-}
-
-EmergencyButtom::~EmergencyButtom() {
-}
 

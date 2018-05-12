@@ -19,6 +19,14 @@
       <itemPath>Receiver.h</itemPath>
       <itemPath>ReceiverTest.cpp</itemPath>
     </logicalFolder>
+    <logicalFolder name="f18"
+                   displayName="015 - Devices"
+                   projectFiles="true"
+                   kind="ROOT">
+      <itemPath>DeviceTest.cpp</itemPath>
+      <itemPath>Devices.cpp</itemPath>
+      <itemPath>Devices.h</itemPath>
+    </logicalFolder>
     <logicalFolder name="f6" displayName="018 - Drawer" projectFiles="true">
       <itemPath>Drawer.cpp</itemPath>
       <itemPath>Drawer.h</itemPath>
@@ -200,6 +208,12 @@
       </item>
       <item path="CorDaTinta.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="DeviceTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Devices.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Devices.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Digital.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Digital.h" ex="false" tool="3" flavor2="0">
@@ -210,27 +224,9 @@
       </item>
       <item path="DigitalTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="Drawer.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Drawer.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="DrawerTest.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="EmergencyButtom.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="EmergencyButtom.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="EmergencyButtomTest.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="IReceiver.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="JobQueue.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="MaintenanceWindow.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="MaintenanceWindow.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="MaintenanceWindowTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Matriz.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -339,6 +335,12 @@
       <item path="CorDaTinta.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CorDaTinta.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DeviceTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Devices.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Devices.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Digital.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -498,6 +500,12 @@
       <item path="CorDaTinta.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CorDaTinta.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DeviceTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Devices.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Devices.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Digital.cpp" ex="false" tool="1" flavor2="0">
       </item>

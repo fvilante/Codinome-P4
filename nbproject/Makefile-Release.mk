@@ -46,6 +46,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/CabecoteRepository.o \
 	${OBJECTDIR}/CabecoteTest.o \
 	${OBJECTDIR}/CorDaTinta.o \
+	${OBJECTDIR}/DeviceTest.o \
+	${OBJECTDIR}/Devices.o \
 	${OBJECTDIR}/Digital.o \
 	${OBJECTDIR}/DigitalReceiver.o \
 	${OBJECTDIR}/DigitalTest.o \
@@ -157,6 +159,16 @@ ${OBJECTDIR}/CorDaTinta.o: CorDaTinta.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -IP4-Leoni\date\include\date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CorDaTinta.o CorDaTinta.cpp
+
+${OBJECTDIR}/DeviceTest.o: DeviceTest.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -IP4-Leoni\date\include\date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DeviceTest.o DeviceTest.cpp
+
+${OBJECTDIR}/Devices.o: Devices.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -IP4-Leoni\date\include\date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Devices.o Devices.cpp
 
 ${OBJECTDIR}/Digital.o: Digital.cpp
 	${MKDIR} -p ${OBJECTDIR}

@@ -36,7 +36,7 @@ public:
     DigitalReceiverHolder() = delete;
     DigitalReceiverHolder(std::shared_ptr<IReceiver<Digital>> inputSensor)
             : receiver_(inputSensor) { };            
-    virtual ~DigitalReceiverHolder() = default;
+    virtual ~DigitalReceiver_Base() = default;
             
     //Interface
     Digital read() const override final { return getSignal_UseInvertionCriteria(); }    
@@ -78,7 +78,7 @@ public:
     
     //States
     bool isClosed() { return (readSignal() == Level::Low) ? true : false; }
-    bool isOpen() { 
+    bool isOpened() { 
         return ((readSignal() == Level::High) || (readSignal() == Level::None)) ? 
             true : false; 
     }

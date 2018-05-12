@@ -46,15 +46,11 @@ OBJECTFILES= \
 	${OBJECTDIR}/CabecoteRepository.o \
 	${OBJECTDIR}/CabecoteTest.o \
 	${OBJECTDIR}/CorDaTinta.o \
+	${OBJECTDIR}/DeviceTest.o \
+	${OBJECTDIR}/Devices.o \
 	${OBJECTDIR}/Digital.o \
 	${OBJECTDIR}/DigitalReceiver.o \
 	${OBJECTDIR}/DigitalTest.o \
-	${OBJECTDIR}/Drawer.o \
-	${OBJECTDIR}/DrawerTest.o \
-	${OBJECTDIR}/EmergencyButtom.o \
-	${OBJECTDIR}/EmergencyButtomTest.o \
-	${OBJECTDIR}/MaintenanceWindow.o \
-	${OBJECTDIR}/MaintenanceWindowTest.o \
 	${OBJECTDIR}/Matriz.o \
 	${OBJECTDIR}/MatrizRepository.o \
 	${OBJECTDIR}/MatrizRepositoryTest.o \
@@ -149,6 +145,16 @@ ${OBJECTDIR}/CorDaTinta.o: CorDaTinta.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -I/C/Users/Flavio/Google\ Drive/Flavio/10\ -\ Projetos/Leoni/P4-Retrofit/20\ -\ Software\ P4-Leoni/Software\ P4-Leoni/date/include/date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CorDaTinta.o CorDaTinta.cpp
 
+${OBJECTDIR}/DeviceTest.o: DeviceTest.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -I/C/Users/Flavio/Google\ Drive/Flavio/10\ -\ Projetos/Leoni/P4-Retrofit/20\ -\ Software\ P4-Leoni/Software\ P4-Leoni/date/include/date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DeviceTest.o DeviceTest.cpp
+
+${OBJECTDIR}/Devices.o: Devices.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -I/C/Users/Flavio/Google\ Drive/Flavio/10\ -\ Projetos/Leoni/P4-Retrofit/20\ -\ Software\ P4-Leoni/Software\ P4-Leoni/date/include/date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Devices.o Devices.cpp
+
 ${OBJECTDIR}/Digital.o: Digital.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -163,36 +169,6 @@ ${OBJECTDIR}/DigitalTest.o: DigitalTest.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -I/C/Users/Flavio/Google\ Drive/Flavio/10\ -\ Projetos/Leoni/P4-Retrofit/20\ -\ Software\ P4-Leoni/Software\ P4-Leoni/date/include/date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DigitalTest.o DigitalTest.cpp
-
-${OBJECTDIR}/Drawer.o: Drawer.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -I/C/Users/Flavio/Google\ Drive/Flavio/10\ -\ Projetos/Leoni/P4-Retrofit/20\ -\ Software\ P4-Leoni/Software\ P4-Leoni/date/include/date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Drawer.o Drawer.cpp
-
-${OBJECTDIR}/DrawerTest.o: DrawerTest.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -I/C/Users/Flavio/Google\ Drive/Flavio/10\ -\ Projetos/Leoni/P4-Retrofit/20\ -\ Software\ P4-Leoni/Software\ P4-Leoni/date/include/date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DrawerTest.o DrawerTest.cpp
-
-${OBJECTDIR}/EmergencyButtom.o: EmergencyButtom.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -I/C/Users/Flavio/Google\ Drive/Flavio/10\ -\ Projetos/Leoni/P4-Retrofit/20\ -\ Software\ P4-Leoni/Software\ P4-Leoni/date/include/date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/EmergencyButtom.o EmergencyButtom.cpp
-
-${OBJECTDIR}/EmergencyButtomTest.o: EmergencyButtomTest.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -I/C/Users/Flavio/Google\ Drive/Flavio/10\ -\ Projetos/Leoni/P4-Retrofit/20\ -\ Software\ P4-Leoni/Software\ P4-Leoni/date/include/date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/EmergencyButtomTest.o EmergencyButtomTest.cpp
-
-${OBJECTDIR}/MaintenanceWindow.o: MaintenanceWindow.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -I/C/Users/Flavio/Google\ Drive/Flavio/10\ -\ Projetos/Leoni/P4-Retrofit/20\ -\ Software\ P4-Leoni/Software\ P4-Leoni/date/include/date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MaintenanceWindow.o MaintenanceWindow.cpp
-
-${OBJECTDIR}/MaintenanceWindowTest.o: MaintenanceWindowTest.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -I/C/Users/Flavio/Google\ Drive/Flavio/10\ -\ Projetos/Leoni/P4-Retrofit/20\ -\ Software\ P4-Leoni/Software\ P4-Leoni/date/include/date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MaintenanceWindowTest.o MaintenanceWindowTest.cpp
 
 ${OBJECTDIR}/Matriz.o: Matriz.cpp
 	${MKDIR} -p ${OBJECTDIR}

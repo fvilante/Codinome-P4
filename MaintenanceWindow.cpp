@@ -14,9 +14,3 @@
 #include "MaintenanceWindow.h"
 
 
-MaintenanceWindow::MaintenanceWindow(const MaintenanceWindow& orig) {
-}
-
-MaintenanceWindow::~MaintenanceWindow() {
-}
-

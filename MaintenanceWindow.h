@@ -29,8 +29,8 @@ public:
     
     MaintenanceWindow() = delete;
     MaintenanceWindow(std::shared_ptr<IReceiver<Digital>> sensorSignal) : signal(sensorSignal) { }
-    MaintenanceWindow(const MaintenanceWindow& orig);
-    virtual ~MaintenanceWindow();
+    MaintenanceWindow(const MaintenanceWindow& orig) = default;
+    virtual ~MaintenanceWindow() = default
     
     MaintenanceWindow::State getState() { 
         return ( signal->read() == Level::High ) ? 

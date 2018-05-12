@@ -42,6 +42,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/Cabecote.o \
 	${OBJECTDIR}/CabecoteRepository.o \
 	${OBJECTDIR}/CorDaTinta.o \
+	${OBJECTDIR}/DeviceTest.o \
+	${OBJECTDIR}/Devices.o \
 	${OBJECTDIR}/Digital.o \
 	${OBJECTDIR}/DigitalReceiver.o \
 	${OBJECTDIR}/Drawer.o \
@@ -120,6 +122,16 @@ ${OBJECTDIR}/CorDaTinta.o: CorDaTinta.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CorDaTinta.o CorDaTinta.cpp
+
+${OBJECTDIR}/DeviceTest.o: DeviceTest.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DeviceTest.o DeviceTest.cpp
+
+${OBJECTDIR}/Devices.o: Devices.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Devices.o Devices.cpp
 
 ${OBJECTDIR}/Digital.o: Digital.cpp
 	${MKDIR} -p ${OBJECTDIR}

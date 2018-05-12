@@ -28,8 +28,8 @@ public:
     
     EmergencyButtom() = delete;
     EmergencyButtom(std::shared_ptr<IReceiver<Digital>> sensorSignal) : signal(sensorSignal) { }
-    EmergencyButtom(const EmergencyButtom& orig);
-    virtual ~EmergencyButtom();
+    EmergencyButtom(const EmergencyButtom& orig) = default;
+    virtual ~EmergencyButtom() = default;
     
     EmergencyButtom::State getState() { 
         return ( signal->read() == Level::High ) ? State::OPEN : State::CLOSED; 
