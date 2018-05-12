@@ -14,9 +14,6 @@
 #include "Drawer.h"
 
 std::shared_ptr<Drawer> 
-createDrawer(std::shared_ptr<IReceiver<Digital>> sensor, Drawer::Id id) { 
-    return std::make_shared< Drawer >(sensor, id);
+createDrawer(std::shared_ptr<IReceiver<Digital>> sensor) { 
+    return std::make_shared< Drawer >(sensor);
 }
-
-
-

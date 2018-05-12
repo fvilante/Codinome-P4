@@ -47,6 +47,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/CabecoteTest.o \
 	${OBJECTDIR}/CorDaTinta.o \
 	${OBJECTDIR}/Digital.o \
+	${OBJECTDIR}/DigitalReceiver.o \
 	${OBJECTDIR}/DigitalTest.o \
 	${OBJECTDIR}/Drawer.o \
 	${OBJECTDIR}/DrawerRepository.o \
@@ -161,6 +162,11 @@ ${OBJECTDIR}/Digital.o: Digital.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -IP4-Leoni\date\include\date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Digital.o Digital.cpp
+
+${OBJECTDIR}/DigitalReceiver.o: DigitalReceiver.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -I/C/Users/Flavio/Google -IDrive\Flavio\10 -IProjetos\Leoni\P4-Retrofit\20 -ISoftware -IP4-Leoni\Software -IP4-Leoni\date\include\date -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DigitalReceiver.o DigitalReceiver.cpp
 
 ${OBJECTDIR}/DigitalTest.o: DigitalTest.cpp
 	${MKDIR} -p ${OBJECTDIR}

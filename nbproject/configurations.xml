@@ -12,6 +12,8 @@
       <itemPath>DigitalTest.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="f3" displayName="010 - IReceiver" projectFiles="true">
+      <itemPath>DigitalReceiver.cpp</itemPath>
+      <itemPath>DigitalReceiver.h</itemPath>
       <itemPath>IReceiver.h</itemPath>
       <itemPath>Receiver.cpp</itemPath>
       <itemPath>Receiver.h</itemPath>
@@ -109,6 +111,11 @@
       <itemPath>TimeStamp.h</itemPath>
       <itemPath>TimeStampTest.cpp</itemPath>
     </logicalFolder>
+    <logicalFolder name="f17"
+                   displayName="100 - Properties"
+                   projectFiles="true"
+                   kind="ROOT">
+    </logicalFolder>
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
@@ -197,15 +204,15 @@
       </item>
       <item path="Digital.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="DigitalReceiver.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DigitalReceiver.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="DigitalTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Drawer.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Drawer.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="DrawerRepository.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="DrawerRepository.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="DrawerTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -217,21 +224,7 @@
       </item>
       <item path="IReceiver.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="Job.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Job.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="JobConsumer.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="JobConsumer.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="JobProducer.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="JobProducer.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="JobQueue.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="JobTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="MaintenanceWindow.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -350,6 +343,10 @@
       <item path="Digital.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Digital.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DigitalReceiver.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DigitalReceiver.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="DigitalTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -505,6 +502,10 @@
       <item path="Digital.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Digital.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DigitalReceiver.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DigitalReceiver.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Drawer.cpp" ex="false" tool="1" flavor2="0">
       </item>

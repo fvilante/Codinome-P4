@@ -43,6 +43,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/CabecoteRepository.o \
 	${OBJECTDIR}/CorDaTinta.o \
 	${OBJECTDIR}/Digital.o \
+	${OBJECTDIR}/DigitalReceiver.o \
 	${OBJECTDIR}/Drawer.o \
 	${OBJECTDIR}/DrawerRepository.o \
 	${OBJECTDIR}/EmergencyButtom.o \
@@ -124,6 +125,11 @@ ${OBJECTDIR}/Digital.o: Digital.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Digital.o Digital.cpp
+
+${OBJECTDIR}/DigitalReceiver.o: DigitalReceiver.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DigitalReceiver.o DigitalReceiver.cpp
 
 ${OBJECTDIR}/Drawer.o: Drawer.cpp
 	${MKDIR} -p ${OBJECTDIR}

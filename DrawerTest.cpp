@@ -18,35 +18,49 @@
 
 TEST_CASE( "Drawer class Test", "[Drawer]" ) {
 
-    //arrange   
-    auto level_low = Digital(Level::Low);
-    auto level_high = Digital(Level::High);
+    //parameters   
+    const auto level_ToClose = Digital(Level::Low);
+    const auto level_ToOpen = Digital(Level::High);
     
-    //create sensor
-    auto sensor1 = createDigitalReceiver(level_low);
+    //arrange
+    auto sensor1 = createDigitalReceiver(level_ToClose);
     
     //cria a gaveta
-    auto gaveta1 = createDrawer(sensor1, Drawer::Id::GAVETA1);
+    auto gaveta1 = createDrawer(sensor1);
 
-    SECTION("Testa metodo getId da gaveta") {
+    SECTION("Testa abertura e fechamento do sinal da gaveta") {
+
+        REQUIRE(gaveta1->getLogicInversionFlag()==false);
         
-        Drawer::Id id = gaveta1->getId();
-        REQUIRE(id == Drawer::Id::GAVETA1);
+        sensor1->put( level_ToClose );
+        REQUIRE(gaveta1->isClosed() == true);
+        REQUIRE(gaveta1->isOpen() == false);
+
+
+        sensor1->put( level_ToOpen );
+        REQUIRE(gaveta1->isOpen() == true);
+        REQUIRE(gaveta1->isClosed() == false);
+    }
+    
+    SECTION("Testa inversao de logica da gaveta") {
+
+        REQUIRE(gaveta1->getLogicInversionFlag()==false);
+        gaveta1->setLogicInversionFlag(true);
+        REQUIRE(gaveta1->getLogicInversionFlag()==true);
         
+        sensor1->put( level_ToClose );
+        REQUIRE(gaveta1->isClosed() == false);
+        REQUIRE(gaveta1->isOpen() == true);
+
+        sensor1->put( level_ToOpen );
+        REQUIRE(gaveta1->isClosed() == true);
+        REQUIRE(gaveta1->isOpen() == false);
     }
-
-    SECTION("Testa variacao") {
-
-        sensor1->put( level_low );
-        REQUIRE(gaveta1->getState() == Drawer::State::CLOSED);
-
-        sensor1->put( level_high );
-        REQUIRE(gaveta1->getState() == Drawer::State::OPEN);
-    }
+    
 
     SECTION("Testa Propriedades") {
 
-        Drawer m = Drawer(sensor1, Drawer::Id::GAVETA1);
+        Drawer m = Drawer(sensor1);
 
         SECTION("Testa inicializacao das Propriedades") {
             TESTA_LER_PROPRIEDADE(Coordenada_X_RelativaDaGaveta, 0);

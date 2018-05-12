@@ -20,6 +20,7 @@
 #include "Digital.h"
 
 #include <memory>
+#include <winbase.h>
 
 //Forward declaration
 template <class T> class Receiver ;
@@ -28,27 +29,29 @@ template <class T> class Receiver ;
 std::shared_ptr<Receiver<Digital>> createDigitalReceiver(Digital initial_level);
 
 
-
-//A generic 'receiver TEE' template
+//A generic 'receiver TEE' template with specialization for Digital case
 template <class T>
 class Receiver : public IReceiver<T> {
-    
-    T signal_;
 
 public:
     Receiver() = delete;
     Receiver(T initial_value) : signal_(initial_value) { }        
     Receiver(const Receiver& orig) = default;
-    virtual ~Receiver(){ };
+    virtual ~Receiver() = default;
 
     //Interface implementation
     T read() const override { return signal_; }
     
-    //puts a specified signal inside the stub.
+    //puts a specified signal inside the TEE stub.
     //this signal will only be read when client access read() method.
     void put(T signal) { signal_ = signal; }
 
+private:    
+    T signal_;
+    
 };
+
+
 
 #endif /* RECEIVER_H */
 

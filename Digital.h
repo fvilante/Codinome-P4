@@ -73,6 +73,28 @@ public:
         return (level_ != other);
     }
     
+    //invert its own 'level logic' if possible, and returns
+    //a copy object with the new state.
+    Digital invert() {
+        switch (level_) {
+            case Level::High :
+                level_ = Level::Low;
+                break;
+            case Level::Low :
+                level_ = Level::High;
+                break;
+            case Level::None :
+                level_= Level::None;
+                break;
+            default:
+                //throw a error; (???)
+                level_ = Level::None;
+                break;
+        }
+        
+        return Digital(level_);
+    } 
+    
     //common getters, setters and functions
     
     const Level getLevel() const { return level_; }

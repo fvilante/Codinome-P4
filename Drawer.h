@@ -17,65 +17,99 @@
 #include "IReceiver.h"
 #include "Digital.h"
 #include "Properties.h"
+#include "DigitalReceiver.h"
 
 #include <memory>
+#include <type_traits>
+#include <cassert>
+
+
+// ***************************************************************************
+//  HELPERs
+// ***************************************************************************
+
+//This Helper class 'holds' and 'implements' a IReceiver<Digital> and adds 
+//'inversion of logic' behavior to it.
+class DigitalReceiverHolder : IReceiver<Digital> {
+public:
+    
+    DigitalReceiverHolder() = delete;
+    DigitalReceiverHolder(std::shared_ptr<IReceiver<Digital>> inputSensor)
+            : receiver_(inputSensor) { };            
+    virtual ~DigitalReceiverHolder() = default;
+            
+    //Interface
+    Digital read() const override final { return getSignal_UseInvertionCriteria(); }    
+    //set/get Flag for logic inversion of the digital signal when read
+    void setLogicInversionFlag(bool b) { hasToInvertLogic_ = b; }
+    bool getLogicInversionFlag() const { return hasToInvertLogic_; }
+
+protected:    
+    Digital getSignal_UseInvertionCriteria() const {         
+        return (hasToInvertLogic_ == true) ?
+            (getSignal().invert()) : getSignal();
+    }        
+    Digital getSignal() const { return receiver_->read(); }    
+
+private:
+    std::shared_ptr<IReceiver<Digital>> receiver_;   
+    bool hasToInvertLogic_ = false;
+};
+
+
+
+
+// ***************************************************************************
+//  DEVICES 
+// ***************************************************************************
 
 
 //Classe para representar a gaveta.
-//Esta classe tambem faz um wrapping do sinal do sensor indutivo da gaveta
+//Esta classe faz um wrapping do sinal do sensor indutivo da gaveta
 class Drawer {
 
 public:
     
-    enum class Id : int { GAVETA1, GAVETA2, GAVETA_NULL };
-    
-    enum class State : bool { CLOSED=false, OPEN=true };
-    
     Drawer() = delete;    
-    Drawer(std::shared_ptr<IReceiver<Digital>> sensorSignal, Id gavetaId ) 
-        : signal_(sensorSignal), gavetaId_(gavetaId) { } 
+    Drawer(std::shared_ptr<IReceiver<Digital>> sensor) 
+        : receiverHolder_(sensor) { }
     Drawer(const Drawer& orig) = default;
     virtual ~Drawer() = default;
     
-    Drawer::State getState() { 
-        return ( signal_->read() == Digital::Level::High ) ? 
-            Drawer::State::OPEN : Drawer::State::CLOSED; 
+    //States
+    bool isClosed() { return (readSignal() == Level::Low) ? true : false; }
+    bool isOpen() { 
+        return ((readSignal() == Level::High) || (readSignal() == Level::None)) ? 
+            true : false; 
     }
-    
-    Id getId() { return gavetaId_; } 
-    
-    //helpers
-    bool FECHADA() { return (getState() == State::CLOSED) ? true : false; }
-    bool ABERTA() { return (getState() == State::OPEN) ? true : false; }
+    //set/get Flag for logic inversion of the digital signal when read
+    void setLogicInversionFlag(bool b) { receiverHolder_.setLogicInversionFlag(b); }
+    bool getLogicInversionFlag() const { return receiverHolder_.getLogicInversionFlag(); }
     
 protected:
-    std::shared_ptr<IReceiver<Digital>> signalRead() { 
-        
-        if(/*getInverter_Logica_Do_Sinal()*/false==true) { 
-            //return true;
-        }
-        //else
-        return signal_;
-    
-    }
+    Digital readSignal() { return receiverHolder_.read(); }
     
 private:
-    
-    std::shared_ptr<IReceiver<Digital>> signal_; //sinal do sensor indutivo da gaveta
-    Id gavetaId_;
-    
+     
+    DigitalReceiverHolder receiverHolder_;
     
     //Coordenadas relativas da gaveta em relacao sistema absoluto da maquina
     PROPERTY(int, Coordenada_X_RelativaDaGaveta, 0);
     PROPERTY(int, Coordenada_Y_RelativaDaGaveta, 0);
     PROPERTY(int, Coordenada_Z_RelativaDaGaveta, 0);
     PROPERTY(bool, Inverter_Logica_Do_Sinal, false);
- 
+  
 };
+
+
+// ***************************************************************************
+//  DEVICE FACTORIES
+// ***************************************************************************
+
 
 //Helper function to factory a drawer object
 std::shared_ptr<Drawer> 
-createDrawer(std::shared_ptr<IReceiver<Digital>> sensor, Drawer::Id id);
+createDrawer(std::shared_ptr<IReceiver<Digital>> sensor);
 
 
 #endif /* DRAWER_H */

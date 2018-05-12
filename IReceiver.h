@@ -14,6 +14,8 @@
 #ifndef IRECEIVER_H
 #define IRECEIVER_H
 
+#include "Digital.h"
+
 //This interfaces sets the paradigm of "receiving an object"
 template <class T> 
 class IReceiver {
@@ -23,7 +25,6 @@ public:
     virtual T read() const =0;
     
 };
-
 
 
 #endif /* IRECEIVER_H */
